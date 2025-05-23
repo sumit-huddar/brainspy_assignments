@@ -65,7 +65,10 @@ I implemented a convolution function from scratch using nested loops and applied
 - Combine results using the magnitude:  
   
   Edge Magnitude= sqrt{G_x^2 + G_y^2}
+
+  When I tried to combine them the first time there was a weird image that came due to overflow of values when it was in uint8 type so I switched the type to float32.
   
+  ![weirdpic](weirdcomb.png)
 
 ---
 
@@ -73,19 +76,19 @@ I implemented a convolution function from scratch using nested loops and applied
 
 ### Visual Comparisons
 
-Images were generated for each kernel's X and Y edge detection as well as the combined edge magnitude. These visual outputs highlight the differences in sensitivity and sharpness of the edge detection:
+Images were generated for each kernel's X and Y edge detection as well as the combined edge magnitude. These visual outputs show the differences in sensitivity and sharpness of the edge detection:
 
 | Operator | Horizontal | Vertical | Combined |
 |----------|------------|----------|----------|
-| Sobel    | ![sobel_x]() | ![sobel_y](path) | ![sobel_combined](path) |
-| Scharr   | ![scharr_x](path) | ![scharr_y](path) | ![scharr_combined](path) |
-| Prewitt  | ![prewitt_x](path) | ![prewitt_y](path) | ![prewitt_combined](path) |
+| Sobel    | ![sobel_x](sobelhor.png) | ![sobel_y](sobelvert.png) | ![sobel_combined](sobelcomb.png) |
+| Scharr   | ![scharr_x](scharrhor.png) | ![scharr_y](scharrvert.png) | ![scharr_combined](scharrcomb.png) |
+| Feldman  | ![feldman_x](feldhor.png) | ![feldman_y](feldvert.png) | ![feldman_combined](feldcomb.png) |
 
 ### Observations
 
 - **Sobel** provided good overall edge detection with balanced results.
 - **Scharr** produced sharper edges due to higher emphasis on pixel changes, especially useful for fine details.
-- **Prewitt** was the least sensitive, and gave a more generalized detection that may be suitable for noisier images.
+- **Feldman** was the least sensitive, and gave a more generalized detection that may be suitable for noisier images.
 
 ---
 
