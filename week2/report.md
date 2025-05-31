@@ -78,7 +78,6 @@
 
 
 ---
-
 ## Notes
 
 * For DICOM, assumed some sample metadata because I had to convert nii to dcm
