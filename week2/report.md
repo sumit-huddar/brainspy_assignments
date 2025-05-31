@@ -69,9 +69,11 @@
 
 
 * Axial view shown for both DICOM and NIfTI data
-* ![axial for both](axialboth.png)
+* ![axialnii](axialnii.png)
+* ![axialdcm](axialdcm.png)
 * coronal and sagittal for NIfTI
-*  ![coronal and sagittal](corandsagnii.png)
+*  ![coronalnii](cornii.png)
+*  ![sagittalnii](sagnii.png)
  
 
 
