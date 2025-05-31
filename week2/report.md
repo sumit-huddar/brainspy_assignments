@@ -92,6 +92,5 @@
 * DICOM files required careful sorting and converting nii to dicom was not easy
 * Understanding affine matrix 
 * Metadata formats between DICOM and NIfTI
-
 ---
 
