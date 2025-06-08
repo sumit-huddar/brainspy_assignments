@@ -95,3 +95,26 @@ Conclusion:
 \-LeNet was unsuitable for CIFAR-10 due to its simplicity.
 
 \-AlexNet was a good balance between complexity and performance.
+
+# TRANSFER LEARNING IMPLEMENTATION
+
+# VGG 19, ResNet50, ResNet152 (Shikhar)
+
+VGG19 \-  
+144M Parameters  
+Has Three more convolution layers than VGG16.  
+Epochs \- 5  
+![](image17.png)  
+![](image18.png) 
+![](image19.png)![](image20.png)
+
+## Resnet50 and 152
+
+Resnets employ something called skip connections, which makes some neurons bypass some layers in the middle, minimising the exploding gradient problem and allowing deeper richer feature extraction.   
+While they are generally better than VGG, for a problem simple like MNIST, it is **overkill** and leads to lesser accuracy than VGG and simpler models.  
+![](image21.png)![](image22.png)
+
+####  Also, another conclusion that we can take from this is, that training models from scratch would always lead to better results than transfer learning since we lose feature extraction in compensation of computation cost.
+
+We could also train for more epochs to further illustrate benefits of transfer learning.  
+
